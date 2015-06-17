@@ -14,16 +14,24 @@
 	 * performs additional checks to get proper values for checkbox / radiobutton / checkBoxList / radioButtonList
 	 * @param o object the jQuery object of the input element
 	 */
-	var getAFValue = function (o) {
-		var tagName = o[0].tagName.toLowerCase();
-		if (o.attr('type') !== undefined || tagName === 'textarea' || tagName === 'select') {
-			return o.val();
-		} else {
-			var c = [];
+	getAFValue = function (o) {
+		var type,
+			c = [];
+		if (!o.length) {
+			return undefined;
+		}
+		if (o[0].tagName.toLowerCase() === 'span') {
 			o.find(':checked').each(function () {
 				c.push(this.value);
 			});
 			return c.join(',');
+		}
+		
+		type = o.attr('type');
+		if (type === 'checkbox' || type === 'radio') {
+			return o.filter(':checked').val();
+		} else {
+			return o.val();
 		}
 	};
 
