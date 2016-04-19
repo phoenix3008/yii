@@ -255,13 +255,14 @@ class CDbCommandBuilder extends CComponent
 	 * amount of data into the database tables.
 	 * @param mixed $table the table schema ({@link CDbTableSchema}) or the table name (string).
 	 * @param array[] $data list data to be inserted, each value should be an array in format (column name=>column value).
+	 * @param array $templates templates for the SQL parts.
 	 * If a key is not a valid column name, the corresponding value will be ignored.
 	 * @return CDbCommand multiple insert command
 	 * @since 1.1.14
 	 */
-	public function createMultipleInsertCommand($table,array $data)
+	public function createMultipleInsertCommand($table,array $data,array $templates=array())
 	{
-		return $this->composeMultipleInsertCommand($table,$data);
+		return $this->composeMultipleInsertCommand($table,$data,array $templates=array());
 	}
 
 	/**
