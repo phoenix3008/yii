@@ -262,7 +262,7 @@ class CDbCommandBuilder extends CComponent
 	 */
 	public function createMultipleInsertCommand($table,array $data,array $templates=array())
 	{
-		return $this->composeMultipleInsertCommand($table,$data,array $templates=array());
+		return $this->composeMultipleInsertCommand($table,$data,$templates);
 	}
 
 	/**
