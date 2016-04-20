@@ -14,7 +14,7 @@
 	 * performs additional checks to get proper values for checkbox / radiobutton / checkBoxList / radioButtonList
 	 * @param o object the jQuery object of the input element
 	 */
-	var getAFValue = function (o) {
+	getAFValue = function (o) {
 		var type,
 			c = [];
 		if (!o.length) {
