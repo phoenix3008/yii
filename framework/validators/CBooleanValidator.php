@@ -66,7 +66,7 @@ class CBooleanValidator extends CValidator
 			));
 		}
 	}
-	
+
 	/**
 	 * Validates a static value to see if it is a valid boolean.
 	 * This method is provided so that you can call it directly without going

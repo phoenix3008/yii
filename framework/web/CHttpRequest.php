@@ -775,7 +775,7 @@ class CHttpRequest extends CApplicationComponent
 	{
 		return isset($_SERVER['HTTP_ACCEPT'])?$_SERVER['HTTP_ACCEPT']:null;
 	}
-	
+
 	/**
 	 * Returns request content-type
 	 * The Content-Type header field indicates the MIME type of the data
